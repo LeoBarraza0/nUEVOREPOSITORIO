@@ -22,16 +22,14 @@ function Calcular(event){
 }
 function Generar(event){
     event.preventDefault();
-    let min = 0;
-    let max = 10;
     function numeroAleatorioEntre(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    numgen = parseFloat(numeroAleatorioEntre(min, max));
+    numgen = parseFloat(numeroAleatorioEntre(1, 10));
     document.getElementById("confirmacion").innerText = "¡Se ha generado el número con éxito!";
 }
 function Adivinar(event){
     event.preventDefault();
     let adivinado = parseFloat(document.getElementById('adivinado').value);
-    if(adivinado == numgen){document.getElementById("mensaje4").innerText = "¡Adivinaste! el número era: "+numgen;}else{document.getElementById("mensaje4").innerText = "¡Sigue intentando!";}
+    if(adivinado == numgen){document.getElementById("mensaje4").innerText = "¡Felicidades, adivinaste el número!"}else{document.getElementById("mensaje4").innerText = "Lo siento, el número era: "+numgen;}
 }
