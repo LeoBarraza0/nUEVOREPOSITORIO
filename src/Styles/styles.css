@@ -5,9 +5,19 @@ body {
     padding: 20px;
 }
 
-h1 {
+h1{
+    font-size: 60px;
     text-align: center;
     color: #333;
+}
+a {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+ul{
+    background-color: #28a745;
+    height: 100px;
 }
 
 .container {
