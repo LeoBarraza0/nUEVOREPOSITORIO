@@ -1,3 +1,4 @@
+var numgen = null;
 function Validar(event){
     event.preventDefault();
     let num = parseFloat(document.getElementById('num1').value);
@@ -18,4 +19,19 @@ function Calcular(event){
     if(monto > 100){monto=monto*1.1;document.getElementById('mensaje3').innerText = 'Su nuevo monto es de: '+monto+'. '+'\n Se ha aplicado un descuento';}
     else{document.getElementById('mensaje3').innerText = 'Su monto es de: '+monto+'. '+'\n No se ha aplicado descuento';}
     
+}
+function Generar(event){
+    event.preventDefault();
+    let min = 0;
+    let max = 10;
+    function numeroAleatorioEntre(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    numgen = parseFloat(numeroAleatorioEntre(min, max));
+    document.getElementById("confirmacion").innerText = "¡Se ha generado el número con éxito!";
+}
+function Adivinar(event){
+    event.preventDefault();
+    let adivinado = parseFloat(document.getElementById('adivinado').value);
+    if(adivinado == numgen){document.getElementById("mensaje4").innerText = "¡Adivinaste! el número era: "+numgen;}else{document.getElementById("mensaje4").innerText = "¡Sigue intentando!";}
 }

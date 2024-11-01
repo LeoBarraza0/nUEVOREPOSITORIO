@@ -25,14 +25,24 @@
     <br>
     <main>
         <form action="">
-            <label for=""><h2>Evaluación de descuentos</h2></label>
-            <label for="num1">Ingrese el monto total de su cuenta</label>
-            <textarea name="numero_1" id="montocant"></textarea>
+            <label for=""><h2>Juego de adivinanza de números</h2></label>
+            <label for="num1">Genere un número aleatorio</label>
+            <button onclick="Generar(event)">Generar</button>
             <br>
-            <button onclick="Calcular(event)">Calcular</button>
+            <br>
+            <div id="confirmacion"></div>
+            <br>
+            <label for="num1">¡Intenta adivinarlo!</label>
+            <textarea name="numero_1" id="adivinado"></textarea>
+            <br>
+            <button onclick="Adivinar(event)">Adivinar</button>
+            <br>
+            <br>
+            <div id="mensaje4"></div>
+
         </form>
         <br>
-        <div id="mensaje3"></div>
+
         <br>
         <br>
 
