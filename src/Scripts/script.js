@@ -1,4 +1,5 @@
 var numgen = null;
+var arreglo = new Array(5);;
 function Validar(event){
     event.preventDefault();
     let num = parseFloat(document.getElementById('num1').value);
@@ -16,7 +17,7 @@ function Determinar(event){
 function Calcular(event){
     event.preventDefault();
     let monto = parseFloat(document.getElementById('montocant').value);
-    if(monto > 100){monto=monto*1.1;document.getElementById('mensaje3').innerText = 'Su nuevo monto es de: '+monto+'. '+'\n Se ha aplicado un descuento';}
+    if(monto > 100){monto=monto*0.9;document.getElementById('mensaje3').innerText = 'Su nuevo monto es de: '+monto+'. '+'\n Se ha aplicado un descuento';}
     else{document.getElementById('mensaje3').innerText = 'Su monto es de: '+monto+'. '+'\n No se ha aplicado descuento';}
     
 }

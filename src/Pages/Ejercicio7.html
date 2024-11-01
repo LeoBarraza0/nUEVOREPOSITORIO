@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 7</title>
     <script src="/nUEVOREPOSITORIO/src/Scripts/script.js"></script>
     <link rel="stylesheet" href="/nUEVOREPOSITORIO/src/Styles/styles.css">
 </head>
@@ -28,23 +28,16 @@
     <br>
     <main>
         <form action="">
-            <label for=""><h2>Juego de adivinanza de números</h2></label>
-            <label for="num1">Genere un número aleatorio</label>
-            <button onclick="Generar(event)">Generar</button>
+            <label for=""><h2>Verificación de calificaciones</h2></label>
+            <label for="num1">Ingrese una calificación numérica entre 0 y 100</label>
+            <textarea name="numero_1" id="num1"></textarea>
             <br>
-            <br>
-            <div id="confirmacion"></div>
-            <br>
-            <label for="num1">¡Intenta adivinarlo!</label>
-            <textarea name="numero_1" id="adivinado"></textarea>
-            <br>
-            <button onclick="Adivinar(event)">Adivinar</button>
-            <br>
-            <br>
-            <div id="mensaje4"></div>
-
+            <button onclick="Validar(event)">Validar</button>
         </form>
-
+        <br>
+        <div id="mensaje"></div>
+        <br>
+        <br>
 
     </main>
     <footer>
